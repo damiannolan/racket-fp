@@ -22,7 +22,7 @@
 	(car l)
 	(last-element (cdr l))))
 
-(last-element (list 1 2 3 4 5)) ; 5
+; (last-element (list 1 2 3 4 5)) ; 5
 
 ; remove-last as defined to take a list as input and return a list removing the last element using recursion
 ; if the rest of l is null then return an empty list
@@ -33,13 +33,13 @@
 	'()
 	(cons (car l) (remove-last (cdr l)))))
 
-(remove-last (list 1 2 3 4 5)) ; '(1 2 3 4)
+; (remove-last (list 1 2 3 4 5)) ; '(1 2 3 4)
 
-
+; rcycle as defined to take a list as input and returns the list cyclically shifted one place to the right 
 (define (rcycle l)
   (if (null? l)
 	'()
 	(append-list (list (last-element l)) (remove-last l))))
 
-(rcycle (list 1 2 3 4 5))
+(rcycle (list 1 2 3 4 5)) ; '(5 1 2 3 4)
 
