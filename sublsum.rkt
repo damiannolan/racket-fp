@@ -1,48 +1,31 @@
 #lang racket
 
-(define (append-list list1 list2)
-    (if (null? list1)
-	  list2
-	  (cons (car list1) (append-list (cdr list1) list2))))
-
-(define (comb lst)
-  (combinations lst))
-
-(comb '(1 2 3))
-
+; A helper function for summing the elements of a list of integers
 (define (sum lst)
-  (if (null? lst) 0
+  (if (null? lst) 0 
 	(+ (car lst) (sum (cdr lst)))))
 
-(sum '(1 2 3))
+(sum '(1 2 3)) ; 6
 
-(define (temp lst)
-  (if (= (sum (car (comb lst))) 0) #t #f))
-
-(temp '(1 2 3))
-
-(define (helper lst)
+; Use a wrapper function and make use of a helper function which passes the combinations
+; Helper function will do the bulk of the work
+; If the sum of the car (first element) of the combinations equals 0
+; - cons the car (first element) with a recursive function call passing the cdr
+; Else or Otherwise
+; - Make a recursive function call passing the cdr
+(define (sublsum-aux lst)
   (if (null? lst)
 	'()
     (if (= (sum (car lst)) 0)
-	  (cons (car lst) (helper (cdr lst)))
-	  (helper (cdr lst)))))
-
-(define (wrapper lst)
-  (if (null? lst)
-	'()
-	(helper (combinations lst))))
-
-(wrapper '(1 2 3 4 -5))
-
+	  (cons (car lst) (sublsum-aux (cdr lst)))
+	  (sublsum-aux (cdr lst)))))
 
 (define (sublsum lst)
-  (if (= (sum (car (combinations lst))) 0)
-	(append-list (car (combinations lst)) (sublsum (cdr (combinations lst))))
-	(sublsum (cdr (combinations lst)))))
+  (if (null? lst)
+	'()
+	(sublsum-aux (combinations lst))))
 
-;(sublsum '(1 2 3 4 -5))
+(sublsum '(1 2 3 4 -5)) ; '(() (2 3 -5) (1 4 -5))
 
+(sublsum '(1 2 3 4 5) ; '(())
 
-; if the sum of the car of the combinations equals 0 - append to list and recursive call with cdr
-; else recursive call with cdr
