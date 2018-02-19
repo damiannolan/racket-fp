@@ -9,16 +9,16 @@
 
 ; Use a wrapper function and make use of a helper function which passes the combinations
 ; Helper function will do the bulk of the work
-; If the sum of the car (first element) of the combinations equals 0
+; If the sum of the car (first element) of the combinations equals 0 and isn't null - '()
 ; - cons the car (first element) with a recursive function call passing the cdr
 ; Else or Otherwise
 ; - Make a recursive function call passing the cdr
 (define (sublsum-aux lst)
   (if (null? lst)
 	'()
-    (if (= (sum (car lst)) 0)
+	(if (and (= (sum (car lst)) 0) (not (null? (car lst)))) 
 	  (cons (car lst) (sublsum-aux (cdr lst)))
-	  (sublsum-aux (cdr lst)))))
+      (sublsum-aux (cdr lst)))))
 
 (define (sublsum lst)
   (if (null? lst)
