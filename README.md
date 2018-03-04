@@ -52,4 +52,18 @@ and their elements doesn’t matter. For example:
 > (sublsum (list 1 2 3 4 5))
 '()
 ```
+5. Write a function `hamming-weight` in Racket that takes a list *l* as input and returns the number of non-zero
+   elements in it. For example:
 
+```racket
+> (hamming-weight (list 1 0 1 0 1 1 1 0))
+5
+```
+
+6. Write a function `hamming-distance` in Racket that takes two lists and returns the number of positions in which they
+   differ. For example:
+
+```racket
+> (hamming-distance (list 1 0 1 0 1 1 1 0) (list 1 1 1 1 0 0 0 0))
+5
+```
