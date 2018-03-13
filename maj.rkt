@@ -7,6 +7,23 @@
 ; (maj (list 0 0 0 0 1 1 1 1) (list 0 0 1 1 0 0 1 1) (list 0 1 0 1 0 1 0 1))
 ; '(0 0 0 1 0 1 1 1)
 
+; This produces '(0 1 1 2 1 2 2 3)
+; maybe if > 1 then cons 1 otherwise cons 0
+(define (temp x y z)
+  (temp2 (map (lambda (x y z)(+ x y z)) x y z)))
+
+(define (temp2 lst)
+  (if (null? lst)
+	'()
+	(if (> (car lst) 1)
+	  (cons 1 (temp2 (cdr lst)))
+	  (cons 0 (temp2 (cdr lst))))))
+
+(temp '(0 0 0 0 1 1 1 1) '(0 0 1 1 0 0 1 1) '(0 1 0 1 0 1 0 1))
+;(map (lambda (x y z)
+;	   (+ x y z))
+;	   '(0 0 0 0 1 1 1 1) '(0 0 1 1 0 0 1 1) '(0 1 0 1 0 1 0 1))
+
 (define (majority x y z)
   (converge (maj-aux x y) (maj-aux x z) (maj-aux y z)))
 
@@ -18,6 +35,15 @@
 	    (cons 1 (maj-aux (cdr x) (cdr y)))
 	    (cons 0 (maj-aux (cdr x) (cdr y))))
       (cons 0 (maj-aux (cdr x) (cdr y))))))
+
+(define (maj-or x y z)
+  (if (null? x)
+	'()
+	(if (and (or (= 1 (car x)) (= 1 (car y)) (= 1 (car z))))
+	  (cons 1 (maj-or (cdr x) (cdr y) (cdr z)))
+	  (cons 0 (maj-or (cdr x) (cdr y) (cdr z))))))
+
+(maj-or '(0 0 0 0 1 1 1 1) '(0 0 1 1 0 0 1 1) '(0 1 0 1 0 1 0 1))
 
 (define (converge x y z)
   (if (null? x)
