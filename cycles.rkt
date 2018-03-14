@@ -10,7 +10,7 @@
 (define (lcycle l)
   (if (null? l)
 	'()
-	(append-list (cdr l) (cons (car l) '()))))
+	(append-list (cdr l) (list (car l))))) 
 
 (lcycle (list 1 2 3 4 5)) ; '(2 3 4 5 1)
 
