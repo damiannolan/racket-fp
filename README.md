@@ -1,6 +1,6 @@
 # Theory of Algorithms Problems
 
-A series of problems relating to theory of algorithms and computation implemented using the
+A series of problems relating to theory of algorithms and computation implemented in
 [Racket](https://racket-lang.org). 
 
 ## Problems
