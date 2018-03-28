@@ -115,7 +115,7 @@ For example:
 length and containing numbers. It should return *d*, the distance given by the sum of
 the square residuals between the numbers in the lists:
 
-This means take the i<sup>th</sup> element of *m* from the i<sup>th</sup> element of *l* and square the
+This means take the *i<sup>th</sup>* element of *m* from the *i<sup>th</sup>* element of *l* and square the
 result for all *i*. Then add all of those to get *d*. For example:
 
 ```racket
