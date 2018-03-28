@@ -1,5 +1,7 @@
 #lang racket
 
+; Rough work snippets
+
 (define (sum lst)
   (if (null? lst) 0
 	(+ (car lst) (sum (cdr lst)))))
@@ -21,4 +23,14 @@
 	  (sublsum-aux f z (cdr lst)))))
 
 (sublsum '(1 2 3 4 -5))
+
+
+(require math/number-theory)
+
+(filter prime? (range 1 21))
+
+(define (decide-prime x)
+    (prime? x))
+
+(decide-prime 37)
 

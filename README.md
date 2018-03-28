@@ -1,4 +1,4 @@
-# Functional Programming in Racket - Problem Set
+# λ Functional Programming in Racket - Problem Set
 
 ## Overview
 A series of problems relating to theory of algorithms and computation implemented in
