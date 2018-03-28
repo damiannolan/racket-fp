@@ -5,7 +5,8 @@
 ; - and keep the ones = 0
 
 (define (sum lst)
-  (if (null? lst) 0
+  (if (null? lst)
+	0
 	(+ (car lst) (sum (cdr lst)))))
 
 (define (sublsum-aux lst1 lst2)
@@ -16,6 +17,6 @@
 	  (sublsum-aux (cdr lst1) (cdr lst2)))))
 
 (define (sublsum lst)
-  (sublsum-aux (map sum (combinations lst)) (combinations lst)))
+  (sublsum-aux (map sum (cdr (combinations lst))) (cdr (combinations lst))))
 
 (sublsum '(1 2 3 4 -5))
