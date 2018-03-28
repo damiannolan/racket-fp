@@ -1,11 +1,22 @@
-# Theory of Algorithms Problems
+# Functional Programming in Racket - Problem Set
 
+## Overview
 A series of problems relating to theory of algorithms and computation implemented in
-[Racket](https://racket-lang.org). 
+[Racket](https://racket-lang.org). The purpose of this problem set is to develop an understanding of 
+Functional Programming and in turn learn to implement effective solutions to problems using primitive functions.
+This means  using only `cons`, `car`, `cdr`, `define`, `lambda`, `if`, `null`, `null?`, `cond`, `map`,`=` and
+the basic numerical operators (`+`, `-`, `*`, `/`, `modulo`).
+
+## Functional Programming
+Insert small section here
+
+## Getting Started with Racket
+Insert section here
 
 ## Problems
 
-1. Write, from scratch, a function in Racket that uses brute-force algorithm that takes a single positive integer and return true if the number is a prime and false otherwise.
+1. Write, from scratch, a function in Racket that uses brute-force algorithm that takes a single positive integer 
+and return true if the number is a prime and false otherwise.
  Call the function `decide-prime`.
 
 2. Write, from scratch, a function in Racket that takes a positive integer *n*<sub>0</sub> as input
