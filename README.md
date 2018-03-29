@@ -8,7 +8,42 @@ This means  using only `cons`, `car`, `cdr`, `define`, `lambda`, `if`, `null`, `
 the basic numerical operators (`+`, `-`, `*`, `/`, `modulo`).
 
 ## Functional Programming
-Insert small section here
+Functional Programming is a programming paradigm based on lambda calculus. Functional programming deals with 
+building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
+Functional programming is declarative rather than imperative, and application state flows through pure functions.
+Contrast with object oriented programming, where application state is usually shared and colocated with methods in
+objects.
+
+In the 1950's John McCarthy created *Lisp* - the first functional programming language. McCarthy is also responsible for
+the coining of the term *artificial intelligence*. *Lisp* contains a large number of different dialects and
+implementations. Some of the more popular dialects include:
+
+- Clojure
+- Common Lisp
+- Racket
+- Scheme
+
+Programs in *Lisp* are like λ-Calculus expressions. Every expression is either: 
+
+- *x* a variable
+- *(M N)* an application
+- *λx.M* an abstraction
+
+A number of concepts are fundamental to functional programming including:
+
+- Pure Functions
+- First Class and Higher Order Functions
+- Recursion
+- Immutable State
+- Side Effects
+
+Many Functinal Programming concepts and ideas are now present in many imperative programming languages. For example Java
+8 has reverse engineered and introduced many functional features. Functional Programming is now a fundamental part of
+Modern JavaScript and functional concepts are used throughout libraries such as [React](https://reactjs.org/), [Redux](https://redux.js.org/)
+ and [Cycle.js](https://cycle.js.org/).
+
+A fantastic article about Functional Programming in JavaScript can be found on medium
+[HERE!](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
 ## Getting Started with Racket
 Insert section here
