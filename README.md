@@ -190,4 +190,8 @@ result for all *i*. Then add all of those to get *d*. For example:
 ## References
 
 [The Little Schemer - By Daniel P. Friedman and Matthias Felleisen](https://mitpress.mit.edu/books/little-schemer)
+[Racket Docs](https://docs.racket-lang.org/)
+[Functional Programming](https://en.wikipedia.org/wiki/Functional_programming)
+[Mastering the JavaScript Interview. What is functional
+programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
