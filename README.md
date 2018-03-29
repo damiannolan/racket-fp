@@ -7,6 +7,9 @@ Functional Programming and in turn learn to implement effective solutions to pro
 This means  using only `cons`, `car`, `cdr`, `define`, `lambda`, `if`, `null`, `null?`, `cond`, `map`,`=` and
 the basic numerical operators (`+`, `-`, `*`, `/`, `modulo`).
 
+Descriptions, decisions and short explanations of choices taken on solutions for problems are provided as comments in
+the code.
+
 ## Functional Programming
 [Functional Programming](https://en.wikipedia.org/wiki/Functional_programming) is a programming paradigm based on lambda calculus. Functional programming deals with 
 building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
@@ -190,11 +193,8 @@ result for all *i*. Then add all of those to get *d*. For example:
 ## References
 
 1. [The Little Schemer - By Daniel P. Friedman and Matthias Felleisen](https://mitpress.mit.edu/books/little-schemer)
-
 2. [Racket Docs](https://docs.racket-lang.org/)
-
 3. [Functional Programming](https://en.wikipedia.org/wiki/Functional_programming)
-
 4. [Mastering the JavaScript Interview. What is functional
 programming?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
