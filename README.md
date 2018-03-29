@@ -8,7 +8,7 @@ This means  using only `cons`, `car`, `cdr`, `define`, `lambda`, `if`, `null`, `
 the basic numerical operators (`+`, `-`, `*`, `/`, `modulo`).
 
 ## Functional Programming
-Functional Programming is a programming paradigm based on lambda calculus. Functional programming deals with 
+[Functional Programming](https://en.wikipedia.org/wiki/Functional_programming) is a programming paradigm based on lambda calculus. Functional programming deals with 
 building software by composing pure functions, avoiding shared state, mutable data, and side-effects.
 Functional programming is declarative rather than imperative, and application state flows through pure functions.
 Contrast with object oriented programming, where application state is usually shared and colocated with methods in
@@ -18,10 +18,10 @@ In the 1950's John McCarthy created *Lisp* - the first functional programming la
 the coining of the term *artificial intelligence*. *Lisp* contains a large number of different dialects and
 implementations. Some of the more popular dialects include:
 
-- Clojure
-- Common Lisp
-- Racket
-- Scheme
+- [Clojure](https://clojure.org/)
+- [Common Lisp](https://common-lisp.net/)
+- [Racket](https://racket-lang.org)
+- [Scheme](https://www.scheme.com/tspl4/)
 
 Programs in *Lisp* are like λ-Calculus expressions. Every expression is either: 
 
@@ -46,7 +46,15 @@ A fantastic article about Functional Programming in JavaScript can be found on m
 [HERE!](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-functional-programming-7f218c68b3a0)
 
 ## Getting Started with Racket
-Insert section here
+
+If you are OSX you can simple install Racket using [Homebrew](https://brew.sh).
+
+```
+brew install racket
+```
+
+Alternatively you can download a [Racket distribution](http://racket-lang.org/download/) from the site which comes
+equipped with a graphical IDE called DrRacket.
 
 ## Problems
 
