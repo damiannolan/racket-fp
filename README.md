@@ -56,6 +56,16 @@ brew install racket
 Alternatively you can download a [Racket distribution](http://racket-lang.org/download/) from the site which comes
 equipped with a graphical IDE called DrRacket.
 
+## Usage
+
+Running the problem scripts in this repository can be done via your Terminal or CLI. 
+
+For example:
+
+```
+racket lstq.rkt
+```
+
 ## Problems
 
 1. Write, from scratch, a function in Racket that uses brute-force algorithm that takes a single positive integer 
